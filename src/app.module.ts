@@ -7,8 +7,9 @@ import { AuthController } from './auth/auth/auth.controller';
 import { UserModule } from './user/user.module';
 import config from './config/ormconfig';
 import { AuthModule } from './auth/auth/auth.module';
+import { RecipeModule } from './recipe/recipe.module';
 @Module({
-  imports: [TypeOrmModule.forRoot(config), ConfigModule.forRoot({ isGlobal: true }), UserModule, AuthModule],
+  imports: [TypeOrmModule.forRoot(config), ConfigModule.forRoot({ isGlobal: true }), UserModule, AuthModule, RecipeModule],
   controllers: [AppController],
   providers: [AppService],
 })
